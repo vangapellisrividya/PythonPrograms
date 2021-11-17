@@ -8,25 +8,16 @@
     '''
 import re
 
-input_year = int(input("Enter the Year: "))
-def isvalid(input_year):
-    """
-    Description:
-        This  will give valid digit input_year
-    """
-    pattern=re.compile('[1-9]?[1-9]{4}')
-    return pattern.match(input_year)
 
-if isvalid(input_year):
-    print("valid year")
-else:
-    print("not valid year")
-    year=int(input_year)
-def is_leap(year):
-    if (year%400 == 0) or (year %4 ==0 and year % 100 != 0):
-        return True 
-    return  False
-if is_leap(input_year):
-    print("is a leap year")
-else:
-    print("Not a leap year")
+if __name__=='__main__':
+    year=input("enter the year")
+    pattern="^[1-9]{1}[0-9]{4}$"
+    result=re.match(pattern,year)
+    if result:
+        print("valid year")
+    if(year%400 == 0) or year %4 ==0:
+        print("leap year")
+    else:
+        print("not valid year")
+        
+    

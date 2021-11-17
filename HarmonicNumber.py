@@ -6,14 +6,14 @@
     @Title: HarmonicNumber
 
     '''
-Num = int(input(" Enter a number: "))
-def newharmonic(N) :
-    # H1 = 1
+
+   
+if __name__=='__main__':
+    num = int(input(" Enter a number: "))
+     # H1 = 1
     harmonic = 1.00
- 
     # loop to apply the forumula
-    for i in range(2, N + 1) :
+    for i in range(2, num + 1) :
         harmonic += 1 / i
- 
-    return harmonic 
-print(round(newharmonic(Num),5))
+    print(harmonic) 
+    print(round((num),5))
